@@ -29,8 +29,8 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.deepPurple,
-          ).copyWith(secondary: Colors.deepPurple[400]),
+        colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.indigo,
+          ).copyWith(secondary: const Color.fromARGB(255, 15, 69, 136)),
         useMaterial3: true,
       ),
       home: MyHomePage(),
