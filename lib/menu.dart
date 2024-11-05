@@ -7,9 +7,10 @@ class MyHomePage extends StatelessWidget {
     
   MyHomePage({super.key});
   final List<ItemHomepage> items = [
-         ItemHomepage("Lihat  daftar Produk", Icons.mood),
-         ItemHomepage("Tambah Produk", Icons.add),
-         ItemHomepage("Logout", Icons.logout),
+         ItemHomepage("Lihat  daftar Produk", Icons.mood,const Color.fromARGB(255, 187, 15, 15)),
+         ItemHomepage("Tambah Produk", Icons.add, const Color.fromARGB(255, 25, 14, 178)),
+         ItemHomepage("Logout", Icons.logout,const Color.fromARGB(255, 20, 191, 80)),
+    
      ];
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -110,6 +111,7 @@ class InfoCard extends StatelessWidget {
   final String title;  // Judul kartu.
   final String content;  // Isi kartu.
 
+
   const InfoCard({super.key, required this.title, required this.content});
 
   @override
@@ -139,8 +141,8 @@ class InfoCard extends StatelessWidget {
 class ItemHomepage {
      final String name;
      final IconData icon;
-
-     ItemHomepage(this.name, this.icon);
+     final Color colorbutton;
+     ItemHomepage(this.name, this.icon, this.colorbutton);
  }
 
  class ItemCard extends StatelessWidget {
@@ -154,7 +156,7 @@ class ItemHomepage {
   Widget build(BuildContext context) {
     return Material(
       // Menentukan warna latar belakang dari tema aplikasi.
-      color: Theme.of(context).colorScheme.secondary,
+      color: item.colorbutton,
       // Membuat sudut kartu melengkung.
       borderRadius: BorderRadius.circular(12),
       
@@ -180,13 +182,17 @@ class ItemHomepage {
                   item.icon,
                   color: Colors.white,
                   size: 30.0,
+                  
                 ),
+
                 const Padding(padding: EdgeInsets.all(3)),
                 Text(
                   item.name,
                   textAlign: TextAlign.center,
                   style: const TextStyle(color: Colors.white),
+                  
                 ),
+                
               ],
             ),
           ),
