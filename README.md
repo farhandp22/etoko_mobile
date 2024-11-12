@@ -44,3 +44,41 @@ samples, guidance on mobile development, and a full API reference.
     - mengganti warna dan text button card 
     - mengimplementasikan info dan itemCard untuk ditampilkan pada myHomePage
 
+# Tugas 8
+
+1. Apa kegunaan const di Flutter? Jelaskan apa keuntungan ketika menggunakan const pada kode Flutter. Kapan sebaiknya kita menggunakan const, dan kapan sebaiknya tidak digunakan?
+    kegunaan dari const adalah untuk membuat objek data yang tidak dapat diubah seperti warna dan konfigurasi.
+    keuntuungan const pada flutter adalah objek data tidak berubah setelah diinisialisasi dan sebaiknya digunkan ketika objek dapat diubah dan sebaliknya tidak digunakan untuk user yang ingin merubah objek.
+
+2. Jelaskan dan bandingkan penggunaan Column dan Row pada Flutter. Berikan contoh implementasi dari masing-masing layout widget ini!
+Row merupakan widget layout yang digunakan untuk mengatur tata letak elemen-elemen dalam satu baris secara horizontal. Widget-row dapat berisi widget lainnya, seperti teks, gambar, atau widget lainnya, dan dapat diatur dalam berbagai cara, termasuk di tengah, ke kiri, ke kanan, atau rata kiri-kanan.
+contoh:
+Row(
+children: [
+Text(‘Elemen 1’),
+Text(‘Elemen 2’),
+Text(‘Elemen 3’),
+],
+)
+Column adalah widget layout yang digunakan untuk mengatur tata letak elemen-elemen dalam satu kolom secara vertikal. Widget-column juga dapat berisi widget lainnya dan dapat diatur dalam berbagai cara, termasuk di tengah, ke atas, ke bawah, atau rata atas-bawah.
+contoh:
+Column(
+children: [
+Text(‘Elemen 1’),
+Text(‘Elemen 2’),
+Text(‘Elemen 3’),
+],
+)
+Perbedaan antara Row dan Column dalam Flutter adalah orientasi tata letak yang mereka perlihatkan. Row mengatur widget secara horizontal dalam satu baris, sementara Column mengatur widget secara vertikal dalam satu kolom. Kedua widget ini sangat berguna untuk mengatur tata letak elemen-elemen dalam sebuah aplikasi Flutter dengan mudah dan efektif.
+
+
+3. Sebutkan apa saja elemen input yang kamu gunakan pada halaman form yang kamu buat pada tugas kali ini. Apakah terdapat elemen input Flutter lain yang tidak kamu gunakan pada tugas ini? Jelaskan!
+    ada seperti CheckboxListTile(checklist suatu item), SwitchListTile(mengubah fitur tombol seperti on/off), DropdownButton(untuk memilih item yang ada pada dropdown list), dan Slider(untuk mengatur intensitas suatu value dengan cara slide dari range yang ditentukan),TextFromField diimplementasikan buat memakai tiga elemen yaitu name,amount,description.
+
+4.  Bagaimana cara kamu mengatur tema (theme) dalam aplikasi Flutter agar aplikasi yang dibuat konsisten? Apakah kamu mengimplementasikan tema pada aplikasi yang kamu buat?
+    iya, pada main.dart memiliki tipe materialApp yaitu colorScheme agar aplikasi konsisten
+
+5. Bagaimana cara kamu menangani navigasi dalam aplikasi dengan banyak halaman pada Flutter?
+  caranya dengan menggunakan method push yaitu menambahkan route ke paling atas dengan menggunakan stack.kemudian,
+  ada pop yaitu menghapus route yang paling atas dengan menggunakan stack
+  
