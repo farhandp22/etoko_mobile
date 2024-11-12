@@ -5,10 +5,10 @@ class MoodEntryFormPage extends StatefulWidget {
   const MoodEntryFormPage({super.key});
 
   @override
-  State<MoodEntryFormPage> createState() => _MoodEntryFormPageState();
+  State<MoodEntryFormPage> createState() => _ProductEntryFormPageState();
 }
 
-class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
+class _ProductEntryFormPageState extends State<MoodEntryFormPage> {
     final _formKey = GlobalKey<FormState>();
     String _mood = "";
     String _feelings = "";
@@ -19,7 +19,7 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
     appBar: AppBar(
       title: const Center(
         child: Text(
-          'Form Tambah Mood Kamu Hari ini',
+          'Form Tambah produk Kamu Hari ini',
         ),
       ),
       backgroundColor: Theme.of(context).colorScheme.primary,
@@ -49,7 +49,7 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
         },
         validator: (String? value) {
           if (value == null || value.isEmpty) {
-            return "Mood tidak boleh kosong!";
+            return "produk tidak boleh kosong!";
           }
           return null;
         },
@@ -59,8 +59,8 @@ class _MoodEntryFormPageState extends State<MoodEntryFormPage> {
   padding: const EdgeInsets.all(8.0),
   child: TextFormField(
     decoration: InputDecoration(
-      hintText: "amount",
-      labelText: "amount",
+      hintText: "description",
+      labelText: "description",
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(5.0),
       ),
@@ -82,8 +82,8 @@ Padding(
   padding: const EdgeInsets.all(8.0),
   child: TextFormField(
     decoration: InputDecoration(
-      hintText: "description",
-      labelText: "description",
+      hintText: "amount",
+      labelText: "amount",
       border: OutlineInputBorder(
         borderRadius: BorderRadius.circular(5.0),
       ),
@@ -125,8 +125,8 @@ Align(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text('nama: $_mood'),
-                                    Text('amount: $_feelings'),
-                                    Text('description: $_moodIntensity'),
+                                    Text('description: $_feelings'),
+                                    Text('amount: $_moodIntensity'),
                                   ],
                                 ),
                               ),
