@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:etoko_mobile/screens/menu.dart';
-import 'package:etoko_mobile/screens/moodentry_form.dart';
+import 'package:etoko_mobile/screens/productentry_form.dart';
+import 'package:etoko_mobile/screens/list_productentry.dart';
+
 // TODO: Impor halaman MoodEntryFormPage jika sudah dibuat
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -58,11 +60,22 @@ class LeftDrawer extends StatelessWidget {
        Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => MoodEntryFormPage(),
+                builder: (context) => ProductEntryFormPage(),
               ),
             );
     },
   ),
+  ListTile(
+    leading: const Icon(Icons.add_reaction_rounded),
+    title: const Text('Daftar produk'),
+    onTap: () {
+        // Route menu ke halaman mood
+        Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const ProductEntryPage()),
+        );
+    },
+),
         ],
       ),
     );
