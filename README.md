@@ -24,7 +24,7 @@ samples, guidance on mobile development, and a full API reference.
     perubahan data.
 2. Sebutkan widget apa saja yang kamu gunakan pada proyek ini dan jelaskan fungsinya.
    - Scaffold : sebagai kerangka dasar dan terdiri dari appBar,tombol floating buttondan body
-   - Text : untuk menaplikan teks pad aplikasi android
+   - Text : untuk menamplikan teks pad aplikasi android
    - Card : untuk mengelompokkan data
    - container : sebagai wadah untuk mengatur tata letak konten di dalam nya
 3.  Apa fungsi dari setState()? Jelaskan variabel apa saja yang dapat terdampak dengan fungsi tersebut.
